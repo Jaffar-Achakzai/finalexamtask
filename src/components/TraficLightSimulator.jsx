@@ -41,7 +41,7 @@ const getLightStyle = (color, active) => {
   };
 };
 
-
+// Css code for the Traffic Light Simulator
 const styles = {
   container: {
     display: 'flex',

@@ -5,6 +5,7 @@ import TrafficLightSimulator from './components/TraficLightSimulator';
 function App() {
   return (
    <>
+   //calling TraficLightSimulator
    <TrafficLightSimulator />
    </>
   );
