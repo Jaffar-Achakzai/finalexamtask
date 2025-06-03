@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 const TrafficLightSimulator = () => {
   const [activeLight, setActiveLight] = useState('red');
 
-// logic code 
-useEffect(() => {
+  useEffect(() => {
     const interval = setInterval(() => {
       setActiveLight(prev => {
         if (prev === 'red') return 'yellow';
@@ -16,7 +15,6 @@ useEffect(() => {
     return () => clearInterval(interval);
   }, []);
 
-  
   return (
     <div style={styles.container}>
       <h2 style={styles.title}>Traffic Light Simulator</h2>
@@ -44,6 +42,37 @@ const getLightStyle = (color, active) => {
 };
 
 
-
+const styles = {
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100vh',
+    backgroundColor: '#222',
+  },
+  title: {
+    color: '#fff',
+    marginBottom: '20px',
+  },
+  trafficLight: {
+    backgroundColor: '#111',
+    padding: '20px',
+    borderRadius: '30px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '20px',
+  },
+  light: {
+    width: '60px',
+    height: '60px',
+    borderRadius: '50%',
+    backgroundColor: '#333',
+  },
+};
 
 export default TrafficLightSimulator;
+
+
+
